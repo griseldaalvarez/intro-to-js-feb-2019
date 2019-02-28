@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Day 1</title>
+<stle>
+  .clicked{
+    backgruond-color: 'bllue';
+    font-size: 90px;
+    color: white;
+  }
+</stle>
+
 </head>
 <body>
-    test
+    <button onclick="whenClicked()">
+      click me
+    </button>
+
+    <script>
+      conts colors = ['blue', 'red', 'green']
+      colors.push('orange');
+      colors.unshift('black');
+      let currentColor = 0;
+
+      const button = document.getElementsByTagName('button')[0]
+      .button.addEventListener('mouseenter', whenclicked)
+
+        funtion whenClicked() {
+          setTimeout( () => {
+            button.styel.backgroundColor = colors[current]
+          }
+        }
+    </script>
 </body>
 </html>
