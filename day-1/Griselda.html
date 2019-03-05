@@ -5,13 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+<style>
+div {
+
+}
+</style>
+
 </head>
 <body>
 
 
   <script>
-  var myString = "it works";
-    console.log(myString);
+  //how many weeks to display;
+
+  const weeks = 6;
+  //how many days in a week;
+  const days = 7;
+  const dayArray = []
+
+
+  const container = document.createElement('div');
+  body.appendChild(container);
+  container.style.width = '720px';
+  container.style.height = (weeks * 100) + 'px';
+  body.style.dsiplay = 'flex';
+  body.style.justifyContent = 'center';
+ const today = new Date().getMonth();
+ const firstDay = new Date('${today + 1}/01/${new Date().getFullYear()}')
+ cosnt nextMonth = new Date('${today + 1 +1}/01/${new Date().getFullYear()}')
+ cosnt lastDay = nextMonth.getDate()
+ let dayNumber = 0;
+ console.log(firstDay, 'first day');
+ for (let i = 0 <weeks * days; i++) {
+
+
+     const day = document.createElement('div');
+     if (i >= firstDay && dayNumber < lastDay) {
+       dayNumber++;
+       day.innerText = dayNumber;
+     }else{
+       day.innerText = dayNumber;
+       day.style.backgroundColor = 'olive'
+
+     }
+
+
+     day.style.display = 'inline-block';
+     day.style.height = '100px';
+     day.style.width = '100px';
+     document.body.appendChild(day);
+     daysArray[i] = day;
+  }
+
+console.log('days', daysArray)
+
 
 
   </script>
