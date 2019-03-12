@@ -29,12 +29,12 @@ div {
   body.appendChild(container);
   container.style.width = '720px';
   container.style.height = (weeks * 100) + 'px';
-  body.style.dsiplay = 'flex';
+  body.style.display = 'flex';
   body.style.justifyContent = 'center';
  const today = new Date().getMonth();
  const firstDay = new Date('${today + 1}/01/${new Date().getFullYear()}')
- cosnt nextMonth = new Date('${today + 1 +1}/01/${new Date().getFullYear()}')
- cosnt lastDay = nextMonth.getDate()
+ const nextMonth = new Date('${today + 1 +1}/01/${new Date().getFullYear()}')
+ const lastDay = nextMonth.getDate()
  let dayNumber = 0;
  console.log(firstDay, 'first day');
  for (let i = 0 <weeks * days; i++) {
