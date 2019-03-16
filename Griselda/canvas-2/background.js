@@ -1,51 +1,36 @@
 class Bg{
-    constructor(){
-        class Player {
-            x = 0;
+     x = 0;
+     y = 0;
+     w = 0;
+     h = 0;
+     context = null;
+     sx = 0;
+     sy = 0;
+     sw = width;
+     sh = height;
         
-            y = 0;
+        constructor(x,y,w,h, context){
         
-            w = 0;
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.context = context;
         
-            h = 0;
+        console.log(img);
+    }
         
-            context = null;
-            sx = 0;
-            sy = 0;
-            sw = width;
-            sh = height;
-        
-            constructor(x,y,w,h, context){
-        
-                this.x = x;
-        
-                this.y = y;
-        
-                this.w = w;
-        
-                this.h = h;
-        
-                this.context = context;
-        
-                console.log(this);
-            }
-        
-            draw() {
-                this.context.drawImage(img, 
-                    this.sx, this.sy, this.sw, this.sh,
-                    this.x, this,y, this.w, this.h
-                    );
-            } 
+    draw() {
+        this.context.drawImage(img, 
+        this.sx, this.sy, this.sw, this.sh,
+        this.x, this.y, this.w, this.h
+         );
+    } 
 
-            update(){
-                this.x -= 1;
-                if( this.x < -width){
-                    this.x = width
+    update(){
+        this.x -= 1;
+        if( this.x + this.w < 0){
+            this.x = width;
                 }
             }
     }
-
-
-
-
-}

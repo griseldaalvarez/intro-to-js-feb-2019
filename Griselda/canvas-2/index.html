@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Canvas2</title>
 </head>
 <body>
@@ -19,10 +17,11 @@
     canvas.height = height;
     canvas.width = width;
     const img = document.createElement('img');
-    img.src = 'sprite.png';
+    img.src = './sprite.png';
     document.body.prepend(img);
     
     </script>
+    
     <script src='player.js'></script>
     <script src='background.js'></script>
     <script src='game.js'></script>

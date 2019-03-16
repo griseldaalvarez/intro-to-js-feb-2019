@@ -27,7 +27,7 @@ class Player {
 
         this.context = context;
 
-        console.log(this);
+        console.log(img);
     }
 
     draw() {
@@ -39,7 +39,9 @@ class Player {
 
     update(){
         this.y += 1;
-
+        this.y++;
+        this.y = this.y + 1;
+        
         if(this.y > height){
             this.y = -100;
         }
