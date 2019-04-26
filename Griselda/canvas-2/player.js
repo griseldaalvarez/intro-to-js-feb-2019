@@ -65,6 +65,8 @@ class Player {
     moveUp(){
         console.log('move up');
         this.motion = 0;
+        flapAudio.currentTime
+        flapAudio.play();
 
     }
 }
